@@ -3,8 +3,8 @@ import Nav from "../components/nav/Nav"
 
 const Applayout = ():React.ReactElement | null => {
   return (
-    <div className="flex" >
-         <Nav/>
+    <div className="flex flex-col md:flex-row lg:flex-row" >
+        <Nav/>
         <Outlet/>
     </div>
   )

@@ -7,6 +7,7 @@ import Explore from "./pages/Explore"
 import Settings from "./pages/Settings"
 
 import Applayout from "./pages/Applayout"
+import Message from "./pages/Message"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
             <Route path="edit" element={<Settings/>}/>
           </Route>
           <Route path="/reels" element={<Reels/>}/>
-        <Route path="/explore" element={<Explore/>}/>
+          <Route path="/message" element={<Message/>}/>
+          <Route path="/explore" element={<Explore/>}/>
         </Route>
        </Routes>
     </BrowserRouter>
