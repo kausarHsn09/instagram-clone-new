@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./nav.css";
 import { FiSettings } from "react-icons/fi";
 import { LiaUserFriendsSolid } from "react-icons/lia";
+import { BsInstagram } from "react-icons/bs";
 
 import InstagramLogo from "../../assets/icons-compoenents/InstagramLogo";
 import HomeLogo from "../../assets/icons-compoenents/HomeLogo";
@@ -17,45 +18,48 @@ import MoreLogo from "../../assets/icons-compoenents/MoreLogo";
 const Nav = () => {
   return (
     <>
-      <div className="Nav lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	 hidden">
+      <div className="Nav lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	hidden">
         <NavLink to="/" className="navLogo flex pl-7 md:hidden lg:block">
-          <InstagramLogo />
+          <InstagramLogo /> 
+        </NavLink>
+        <NavLink to="/" className="navLogo flex pl-5 lg:hidden md:block">
+          <BsInstagram className='text-[25px]'/> 
         </NavLink>
 
-        <div className="nav-items flex flex-col  w-full h-full px-5 mt-5 gap-y-2">
-          <NavLink to="/" className="navLinks flex gap-x-2">
+        <div className="nav-items flex flex-col w-full h-full px-5 mt-5 gap-y-2">
+          <NavLink to="/" className="navLinks lg:px-4 flex gap-x-2">
             <HomeLogo /> <p className="md:hidden hidden lg:block ">Home</p>
           </NavLink>
 
-          <NavLink to="/" className="navLinks flex gap-x-2">
+          <NavLink to="/" className="navLinks lg:px-4  flex gap-x-2">
             <SearchLogo /> <p className="md:hidden hidden lg:block ">Search</p>
           </NavLink>
 
-          <NavLink to="/explore" className="navLinks flex gap-x-2">
+          <NavLink to="/explore" className="navLinks lg:px-4  flex gap-x-2">
             <ExploreLogo />{" "}
             <p className="md:hidden hidden lg:block ">Explore</p>
           </NavLink>
 
-          <NavLink to="/reels" className="navLinks flex gap-x-2">
+          <NavLink to="/reels" className="navLinks lg:px-4 flex gap-x-2">
             <ReelsLogo /> <p className="md:hidden hidden lg:block ">Reels</p>
           </NavLink>
 
-          <NavLink to="/message" className="navLinks flex gap-x-2">
+          <NavLink to="/message" className="navLinks lg:px-4 flex gap-x-2">
             <MessageLogo />{" "}
             <p className="md:hidden hidden lg:block ">Message</p>
           </NavLink>
 
-          <button className="navLinks flex gap-x-2">
+          <button className="navLinks lg:px-4 flex gap-x-2">
             <NotificationsLogo />{" "}
             <p className="md:hidden hidden lg:block ">Notifications</p>
           </button>
 
-          <NavLink to="/" className="navLinks flex gap-x-2">
+          <NavLink to="/" className="navLinks  lg:px-4 flex gap-x-2">
             <CreateLogo /> <p className="md:hidden hidden lg:block ">Create</p>
           </NavLink>
 
-          <NavLink to="/profile" className="navLinks flex gap-x-2">
-            <ProfileIcon />{" "}
+          <NavLink to="/profile" className="navLinks lg:px-4  flex gap-x-2">
+            <ProfileIcon />{" "} 
             <p className="md:hidden hidden lg:block ">Profile</p>
           </NavLink>
         </div>
