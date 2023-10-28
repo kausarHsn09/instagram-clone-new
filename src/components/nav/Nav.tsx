@@ -18,7 +18,7 @@ import MoreLogo from "../../assets/icons-compoenents/MoreLogo";
 const Nav = () => {
   return (
     <>
-      <div className="Nav lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	hidden">
+      <div className="Nav  lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	hidden  fixed left-0 bg-white">
         <NavLink to="/" className="navLogo flex pl-7 md:hidden lg:block">
           <InstagramLogo /> 
         </NavLink>
@@ -71,13 +71,13 @@ const Nav = () => {
         </div>
       </div>
 
-      <div className="bg-white lg:hidden md:hidden flex w-full h-[50px] border-b-[1px] px-10 border-grey items-center justify-between absolute z-100">
+      <div className="bg-white lg:hidden md:hidden flex w-full h-[50px] border-b-[1px] px-10 border-grey items-center justify-between fixed z-100">
         <FiSettings className="text-[20px]" />
         <p>kausarhsn</p>
         <LiaUserFriendsSolid className="text-[25px]" />
       </div>
 
-      <div className="lg:hidden md:hidden  absolute bottom-1 flex w-full h-[50px] border-t-[1px] border-grey items-center justify-center gap-x-12 bg-white z-10">
+      <div className="lg:hidden md:hidden  fixed bottom-1 flex w-full h-[50px] border-t-[1px] border-grey items-center justify-center gap-x-12 bg-white z-10">
         <NavLink to="/" className="flex gap-x-2">
           <HomeLogo />
         </NavLink>
