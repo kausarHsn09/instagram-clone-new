@@ -6,14 +6,14 @@ import SuggestedFriends from "../components/suggested-friends/SuggestedFriends"
 
 const Home = () => {
   return (
-    <div className=" w-full justify-center flex lg:flex-row md:flex-row sm:flex-col mt-[70px] lg:mt-10 md:mt-9">
+    <div className=" w-full  flex lg:flex-row md:flex-row sm:flex-col mt-[70px] lg:mt-10 md:mt-9">
 
-      <div className="lg:w-full lg:flex lg:flex-col lg:items-center lg:basis-2/3 lg:grow ">
+      <div className="lg:w-full  lg:flex lg:flex-col lg:items-center lg:basis-2/3 lg:grow ">
 
-        <div className="story ">
+        <div className="story flex w-full justify-center">
           <Stories/>
         </div>
-        <div className="post">
+        <div className="post flex w-full justify-center">
           <Posts/>
         </div>
 

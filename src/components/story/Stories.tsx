@@ -38,11 +38,21 @@ const data: dataType[] = [
     name: "shanto",
     image: storyImage,
   },
+  {
+    id: 7,
+    name: "sahin",
+    image: storyImage,
+  },
+  {
+    id: 8,
+    name: "Abdul",
+    image: storyImage,
+  },
 ];
 
 const Stories = () => {
   return (
-    <div className="w-full items-center  md:w-[630px]   lg:w-[630px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
+    <div className=" items-center justify-center  md:w-[630px]   lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
       {data.map((story)=>(
         <Story key={story.id} story={story}/>
       ))}
