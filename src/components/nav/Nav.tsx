@@ -4,6 +4,8 @@ import { FiSettings } from "react-icons/fi";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { BsInstagram } from "react-icons/bs";
 
+import ProfilePicture from '../../assets/images/MY pic.png'
+
 import InstagramLogo from "../../assets/icons-compoenents/InstagramLogo";
 import HomeLogo from "../../assets/icons-compoenents/HomeLogo";
 import SearchLogo from "../../assets/icons-compoenents/SearchLogo";
@@ -12,7 +14,7 @@ import ReelsLogo from "../../assets/icons-compoenents/ReelsLogo";
 import MessageLogo from "../../assets/icons-compoenents/MessageLogo";
 import NotificationsLogo from "../../assets/icons-compoenents/NotificationsLogo";
 import CreateLogo from "../../assets/icons-compoenents/CreateLogo";
-import ProfileIcon from "../profile-icon/ProfileIcon";
+
 import MoreLogo from "../../assets/icons-compoenents/MoreLogo";
 
 const Nav = () => {
@@ -59,7 +61,7 @@ const Nav = () => {
           </NavLink>
 
           <NavLink to="/profile" className="navLinks lg:px-4  flex gap-x-2">
-            <ProfileIcon />{" "} 
+          <img className={`w-[30px] h-[30px] rounded-full object-cover`} src={ProfilePicture} alt="Profile icon"/>
             <p className="md:hidden hidden lg:block ">Profile</p>
           </NavLink>
         </div>
@@ -94,7 +96,8 @@ const Nav = () => {
           <MessageLogo />
         </NavLink>
         <NavLink to="/profile" className="flex gap-x-2">
-          <ProfileIcon />
+        
+          <img className={`w-[30px] h-[30px] rounded-full object-cover`} src={ProfilePicture} alt="Profile icon"/>
         </NavLink>
       </div>
     </>
