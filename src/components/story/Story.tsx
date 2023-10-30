@@ -1,3 +1,4 @@
+
 import './story.css'
 
 type dataType = {
@@ -7,6 +8,7 @@ type dataType = {
 };
 
 const Story = ({story:{id,image,name}}:dataType) => {
+
   return (
     <div className="flex flex-col items-center">
       <img src={image} alt={name} className="story_border w-[60px] h-[60px] rounded-full"/>

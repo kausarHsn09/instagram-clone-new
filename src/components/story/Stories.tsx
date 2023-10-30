@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Story from "./Story";
 import storyImage from "../../assets/images/kausarhsn__same_face_cartoon_8k_3d_364bf999-4afc-4ef3-b8a5-d4f6c1935881.png";
 
@@ -51,6 +53,25 @@ const data: dataType[] = [
 ];
 
 const Stories = () => {
+
+  const [windowWith,setWindowWith] = useState(500)
+ 
+  useEffect(()=>{ 
+    window.addEventListener("resize", () => {
+      setWindowWith(window.innerWidth)
+    });
+    
+  },[windowWith])
+ 
+
+  if(650>windowWith) return (
+    <div className=" items-center justify-center  md:w-[630px]   lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
+      {data.slice(0,6).map((story)=>(
+        <Story key={story.id} story={story}/>
+      ))}
+    </div>
+  )
+ 
   return (
     <div className=" items-center justify-center  md:w-[630px]   lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
       {data.map((story)=>(
