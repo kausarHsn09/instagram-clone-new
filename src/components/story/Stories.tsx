@@ -54,7 +54,7 @@ const data: dataType[] = [
 
 const Stories = () => {
 
-  const [windowWith,setWindowWith] = useState(500)
+  const [windowWith,setWindowWith] = useState(window.innerWidth)
  
   useEffect(()=>{ 
     window.addEventListener("resize", () => {
@@ -65,7 +65,7 @@ const Stories = () => {
  
 
   if(650>windowWith) return (
-    <div className=" items-center justify-center  md:w-[630px]   lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
+    <div className=" items-center justify-center  md:w-[630px]  lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
       {data.slice(0,6).map((story)=>(
         <Story key={story.id} story={story}/>
       ))}

@@ -60,7 +60,7 @@ const Nav = () => {
             <CreateLogo /> <p className="md:hidden hidden lg:block ">Create</p>
           </NavLink>
 
-          <NavLink to="/profile" className="navLinks lg:px-4  flex gap-x-2">
+          <NavLink to="/profile/post" className="navLinks lg:px-4  flex gap-x-2">
           <img className={`w-[30px] h-[30px] rounded-full object-cover`} src={ProfilePicture} alt="Profile icon"/>
             <p className="md:hidden hidden lg:block ">Profile</p>
           </NavLink>

@@ -2,9 +2,11 @@
 import './story.css'
 
 type dataType = {
-  id: number;
-  name: string;
-  image: string;
+ story:{
+  id: number,
+  name: string,
+  image: string,
+ }
 };
 
 const Story = ({story:{id,image,name}}:dataType) => {
