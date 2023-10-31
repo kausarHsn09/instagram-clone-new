@@ -10,7 +10,7 @@ const data:dataType[] =[
     {
         id:1,
         highLightPic:profileHighlight,
-        highLightName: 'picnic'
+        highLightName: 'Picnic'
     },
     {
         id:2,
@@ -52,7 +52,7 @@ const data:dataType[] =[
 
 const ProgileHighlights = () => {
   return (
-    <div className="flex">
+    <div className="flex mt-10">
 
      {data.map((item)=>(
         <ProgileHighlight key={item.id} items={item}/>
@@ -73,9 +73,11 @@ type itemsType ={
 const ProgileHighlight = ({items}:itemsType) => {
     
   return (
-    <div className="flex flex-col">
-      <img className="w-[70px] h-[70px] object-cover rounded-full" src={items.highLightPic} alt="" />
-      <p>Name</p>
+    <div className="w-full flex justify-center  ">
+      <div className="flex  flex-col gap-y-2 items-center">
+      <img className="w-[70px] h-[70px] object-cover rounded-full border-gray-300 border-[2px]	" src={items.highLightPic} alt="" />
+      <p className="font-bold text-[12px]">{items.highLightName}</p>
+    </div>
     </div>
   )
 }

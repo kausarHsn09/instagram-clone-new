@@ -2,7 +2,12 @@ import React from 'react'
 
 const ProfileSaved = () => {
   return (
-    <div>ProfileSaved</div>
+    <div className='w-full'>
+      <div className='h-[700px]'>
+
+
+      </div>
+    </div>
   )
 }
 

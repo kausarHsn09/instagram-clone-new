@@ -17,13 +17,15 @@ const Profile = () => {
   },[location.pathname,navigate ])
 
   return (
-    <div>
-      <ProfileTop/>
+    <div className="w-full flex justify-center m-10 ">
+     <div className="w-[930px] ">
+     <ProfileTop/>
       <ProgileHighlights/>
-      <hr />
+      <hr className="mt-10" />
       <ProfileInfoLinks/>
     
       <Outlet/>
+     </div>
     </div>
   )
 }
