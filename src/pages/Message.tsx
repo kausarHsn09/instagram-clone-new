@@ -1,8 +1,8 @@
 import Modal from "../components/modal/Modal"
-
+import { createPortal } from "react-dom"
 const Message = () => {
   return (
-    <Modal/>
+    <div>{createPortal( <Modal/>,document.body)}</div>
   )
 }
 
