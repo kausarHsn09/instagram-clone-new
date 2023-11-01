@@ -52,7 +52,7 @@ const data:dataType[] =[
 
 const ProgileHighlights = () => {
   return (
-    <div className="flex mt-10">
+    <div className="flex justify-center gap-x-5 mt-10">
 
      {data.map((item)=>(
         <ProgileHighlight key={item.id} items={item}/>
@@ -73,8 +73,8 @@ type itemsType ={
 const ProgileHighlight = ({items}:itemsType) => {
     
   return (
-    <div className="w-full flex justify-center  ">
-      <div className="flex  flex-col gap-y-2 items-center">
+    <div className="">
+      <div className="flex flex-col gap-y-2 items-center">
       <img className="w-[70px] h-[70px] object-cover rounded-full border-gray-300 border-[2px]	" src={items.highLightPic} alt="" />
       <p className="font-bold text-[12px]">{items.highLightName}</p>
     </div>

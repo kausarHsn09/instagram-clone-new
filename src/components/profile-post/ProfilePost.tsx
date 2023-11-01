@@ -32,7 +32,7 @@ const postData:postDataType[] =[
 
 const ProfilePost = () => {
   return (
-    <div className='w-full flex flex-wrap mt-5 gap-1 '>
+    <div className='w-full grid grid-cols-3	mt-5 gap-1 '>
 
       {postData.map((items)=>(
          <ProfilePostsingle key={items.id} items={items}/>
@@ -54,8 +54,8 @@ type ItmType={
 
 const ProfilePostsingle = ({items}:ItmType) => {
   return (
-    <div>
-      <img src={items.postCover} className='w-[305px] h-[305px] object-cover ' alt="" />
+    <div >
+      <img src={items.postCover} alt="" />
     </div>
   )
 }

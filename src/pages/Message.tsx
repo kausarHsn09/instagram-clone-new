@@ -1,7 +1,8 @@
+import Modal from "../components/modal/Modal"
 
 const Message = () => {
   return (
-    <div>Message</div>
+    <Modal/>
   )
 }
 

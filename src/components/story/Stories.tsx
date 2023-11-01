@@ -73,7 +73,7 @@ const Stories = () => {
   )
  
   return (
-    <div className=" items-center justify-center  md:w-[630px]   lg:w-[630px] w-[430px] flex flex-row lg:gap-x-5 gap-x-3 overflow-x-auto h-[100px] ">
+    <div className="flex flex-row  items-center  md:w-[630px]   lg:w-[630px] w-[430px] lg:gap-x-5 gap-x-3 h-[100px] ">
       {data.map((story)=>(
         <Story key={story.id} story={story}/>
       ))}

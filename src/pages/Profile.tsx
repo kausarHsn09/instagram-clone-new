@@ -17,7 +17,7 @@ const Profile = () => {
   },[location.pathname,navigate ])
 
   return (
-    <div className="w-full flex justify-center m-10 ">
+    <div className="w-full flex justify-center lg:mt-10 mt-20 p-2">
      <div className="w-[930px] ">
      <ProfileTop/>
       <ProgileHighlights/>
