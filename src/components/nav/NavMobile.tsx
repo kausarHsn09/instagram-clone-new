@@ -2,6 +2,9 @@ import { NavLink } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 
+import { useDispatch } from "react-redux";
+import {toggleModal} from '../modal/modalSlice'
+
 import ProfilePicture from '../../assets/images/MY pic.png'
 
 
@@ -14,6 +17,12 @@ import MessageLogo from "../../assets/icons-compoenents/MessageLogo";
 import CreateLogo from "../../assets/icons-compoenents/CreateLogo";
 
 const NavMobile = () => {
+  const dispatch = useDispatch()
+  
+  function handleOpenClick(){
+    dispatch(toggleModal(true))
+  }
+ 
   return (
     <>
     <div className="bg-white lg:hidden md:hidden flex w-full h-[50px] border-b-[1px] px-10 border-grey items-center justify-between fixed z-100">
@@ -32,7 +41,7 @@ const NavMobile = () => {
     <NavLink to="/reels" className="flex gap-x-2">
       <ReelsLogo />
     </NavLink>
-    <button  className="flex gap-x-2">
+    <button  className="flex gap-x-2" onClick={handleOpenClick}>
       <CreateLogo />
     </button>
     <NavLink to="/message" className="flex gap-x-2">

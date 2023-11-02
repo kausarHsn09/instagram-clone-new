@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleModal } from "./modalSlice";
 import { AiOutlineClose } from "react-icons/ai";
 import { useEffect, useRef } from "react";
+
 const Modal = () => {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.modal.open);
@@ -12,13 +13,13 @@ const Modal = () => {
   }
 
   useEffect(() => {
-    function outSideClick(event) {
+    function outSideClick(event: MouseEvent) {
       const target = event.target;
       if (modalRef.current && !modalRef.current.contains(target)) {
         dispatch(toggleModal(false));
       }
     }
-    console.log(modalRef.current);
+
     document.addEventListener("click", outSideClick, true);
   }, [dispatch]);
 
@@ -31,7 +32,7 @@ const Modal = () => {
           </button>
           <div
             ref={modalRef}
-            className="w-[750px] h-[795px] bg-white rounded-md drop-shadow-xl  fixed left-0 top-0 bottom-0 right-0  m-auto z-100"
+            className="w-[350px] h-[390px] lg:w-[750px] lg:h-[795px] md:w-[620px] md:h-[660px] bg-white rounded-md drop-shadow-xl  fixed left-0 top-0 bottom-0 right-0  m-auto z-100"
           >
             <p className="text-center py-4 text-black">Create a new post</p>
             <hr />
