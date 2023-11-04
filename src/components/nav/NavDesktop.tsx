@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {toggleModal} from '../modal/modalSlice'
+import { useState } from "react";
 
+import More from './More'
 
 import "./nav.css";
 import { BsInstagram } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 import ProfilePicture from '../../assets/images/MY pic.png'
 import InstagramLogo from "../../assets/icons-compoenents/InstagramLogo";
 import HomeLogo from "../../assets/icons-compoenents/HomeLogo";
@@ -14,13 +17,15 @@ import ReelsLogo from "../../assets/icons-compoenents/ReelsLogo";
 import MessageLogo from "../../assets/icons-compoenents/MessageLogo";
 import NotificationsLogo from "../../assets/icons-compoenents/NotificationsLogo";
 import CreateLogo from "../../assets/icons-compoenents/CreateLogo";
-import MoreLogo from "../../assets/icons-compoenents/MoreLogo";
+
+
 
 
 
 const NavDesktop = () => {
- const dispatch = useDispatch()
-  
+   const dispatch = useDispatch()
+   const [openMore,setOpenMore] = useState(false)
+
   function handleOpenClick(){
     dispatch(toggleModal(true))
   }
@@ -74,11 +79,15 @@ const NavDesktop = () => {
       </NavLink>
     </div>
 
-    <div className="moreBtn flex items-center justify-center w-full px-5">
-      <button className=" flex py-5 gap-x-2 ">
-        <MoreLogo /> <p className="md:hidden hidden lg:block ">More</p>
+    <div className="moreBtn flex items-center w-full px-5">
+
+      <button className=" flex w-full py-5 md:px-0 px-7 gap-x-2 items-center" onClick={()=>setOpenMore(true)}>
+        <AiOutlineMenu className='text-[20px]'/> <p className="md:hidden hidden lg:block ">More</p>
       </button>
+
     </div>
+
+   {openMore && <More setOpenMore={setOpenMore} openMore={openMore}/>}
   </div>
   )
 }
