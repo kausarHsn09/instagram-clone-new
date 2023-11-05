@@ -27,16 +27,16 @@ const Apparence = ({setIsOpenApparence}) => {
     <div className="flex px-4 items-center justify-between">
       <button onClick={()=> setIsOpenApparence((open)=>!open)}>
         {" "}
-        <FiArrowLeft />
+        <FiArrowLeft className='dark:text-white' />
       </button>
-      <p className="">Switch appearance</p>
-      <MdOutlineDarkMode />
+      <p className='dark:text-white'>Switch appearance</p>
+      <MdOutlineDarkMode className='dark:text-white ' />
     </div>
 
     <hr className="px-4" />
     <div className="dark_C flex justify-between items-center">
       <div>
-        <p>Darkmode</p>
+        <p className='dark:text-white'>Darkmode</p>
       </div>
 
       <label className="switch">

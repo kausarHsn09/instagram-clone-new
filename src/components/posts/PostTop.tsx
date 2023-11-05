@@ -15,8 +15,8 @@ const PostTop = ({profileLink,postImage,name,location}:propType) => {
      <img src={postImage} className="w-[40px] h-[40px] rounded-full object-cover" alt="" /></Link>
 
       <div className="flex flex-col justify-evenly ml-2">
-        <p className="text-[14px]  font-medium">{name}</p>
-        <p className="text-[12px] ">{location}</p>
+        <p className="text-[14px] dark:text-white font-medium">{name}</p>
+        <p className="text-[12px] dark:text-white">{location}</p>
       </div>
     </div>
 

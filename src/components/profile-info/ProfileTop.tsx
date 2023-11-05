@@ -11,29 +11,29 @@ const ProfileTop = () => {
       <div className="p_right_side ">
 
           <div className="flex gap-x-5">
-          <p className="text-[20px] font-norma">kausarhsn</p>
+          <p className="text-[20px] font-normal dark:text-white">kausarhsn</p>
             <button className="bg-[#EFEFEF] px-3 py-1 rounded-md">
               Edit Profile
             </button>
-            <AiFillSetting className="text-[25px]" />
+            <AiFillSetting className="text-[25px] dark:text-white" />
           </div>
     
 
         <div className="flex gap-x-5 lg:mt-3 md:mt-3">
-          <p className="inline">
-            <span className="font-medium text-[16px]">180</span> posts
+          <p className="inline dark:text-white">
+            <span className="font-medium text-[16px] ">180</span> posts
           </p>
-          <p className="inline">
-            <span className="font-medium text-[16px]">180</span> Followers
+          <p className="inline dark:text-white">
+            <span className="font-medium text-[16px] ">180</span> Followers
           </p>
-          <p className="inline">
-            <span className="font-medium text-[16px]">180</span> Following
+          <p className="inline dark:text-white">
+            <span className="font-medium text-[16px] ">180</span> Following
           </p>
         </div>
 
         <div className="lg:mt-3 md:mt-3">
-          <p className="font-medium">kausarhsn</p>
-          <p className="mt-5 lg:mt-1 md:mt-1">Bio</p>
+          <p className="font-medium dark:text-white">kausarhsn</p>
+          <p className="mt-5 lg:mt-1 md:mt-1 dark:text-white">Bio</p>
         </div>
       </div>
     </div>

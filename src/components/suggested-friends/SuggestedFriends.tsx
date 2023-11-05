@@ -13,7 +13,7 @@ const SuggestedFriends = () => {
           />
 
           <div className="flex flex-col items-start  ml-2 ">
-            <p className="font-medium text-[14px]">kausarhsn</p>
+            <p className="font-medium text-[14px] dark:text-white">kausarhsn</p>
             <p className="font-normal text-[16px] text-[#A4A4A4]">
               Kausar Hasan
             </p>
@@ -37,7 +37,7 @@ const SuggestedFriends = () => {
           />
 
           <div className="flex flex-col items-start  ml-2 ">
-            <p className="font-medium text-[14px]">kausarhsn</p>
+            <p className="font-medium text-[14px] dark:text-white">kausarhsn</p>
             <p className="font-normal text-[16px] text-[#A4A4A4]">
               Kausar Hasan
             </p>

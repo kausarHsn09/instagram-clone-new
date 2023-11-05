@@ -14,7 +14,8 @@ export default {
         'grey': '#DBDBDB',
         'black':'#000000',
         'white': '#FFFFFF',
-        'blue' :'#1799F6'
+        'blue' :'#1799F6',
+         'dkhover':'rgba(248, 248, 248, 0.136)'
       }
     },
   },

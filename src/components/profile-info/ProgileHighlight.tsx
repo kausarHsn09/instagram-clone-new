@@ -76,7 +76,7 @@ const ProgileHighlight = ({items}:itemsType) => {
     <div className="">
       <div className="flex flex-col gap-y-2 items-center">
       <img className="w-[70px] h-[70px] object-cover rounded-full border-gray-300 border-[2px]	" src={items.highLightPic} alt="" />
-      <p className="font-bold text-[12px]">{items.highLightName}</p>
+      <p className="font-bold text-[12px] dark:text-white">{items.highLightName}</p>
     </div>
     </div>
   )

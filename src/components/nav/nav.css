@@ -4,17 +4,11 @@
     border-radius: 10px;
 }
 
-.nav-items .navLinks:hover{
-    background-color: rgba(0, 0, 0, 0.055);
-}
+
 .moreBtn{
     border-radius: 10px;
+}
 
-}
-.moreBtn:hover{
-   
-    background-color: rgba(0, 0, 0, 0.055);
-}
 
 /* Dark Mode switcher */
 
