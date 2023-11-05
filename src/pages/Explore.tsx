@@ -1,7 +1,7 @@
 
 const Explore = () => {
   return (
-    <div>Explore</div>
+    <div className="bg-white dark:bg-black">Explore</div>
   )
 }
 

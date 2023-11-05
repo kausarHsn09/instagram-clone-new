@@ -1,9 +1,16 @@
-import {FiSettings} from 'react-icons/fi'
-import {MdDarkMode} from 'react-icons/md'
-import {IoIosLogOut} from 'react-icons/io'
-import { useEffect, useRef } from 'react'
-const More = ({setOpenMore}) => {
-  const ref = useRef()
+import { FiSettings  } from "react-icons/fi";
+import { MdDarkMode  } from "react-icons/md";
+import { IoIosLogOut } from "react-icons/io";
+import { useEffect, useRef, useState } from "react";
+import Apparence from "./Apparence";
+
+const More = ({ setOpenMore }) => {
+  const ref = useRef();
+
+  const [isOpenApparence, setIsOpenApparence] = useState(false);
+
+
+
 
   //Should Be refactor
 
@@ -19,18 +26,44 @@ const More = ({setOpenMore}) => {
   }, [setOpenMore]);
 
 
-  return (
-    <div ref={ref} className="absolute w-[265px] bg-white left-5 bottom-5 z-10 
-    rounded-lg shadow-2xl py-5 pl-5 pr-3">
-      <div className="flex flex-col ">
-        <button className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2"><FiSettings className='text-[20px]'/>Setting</button>
-        
-        <button className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2"><MdDarkMode className='text-[20px]'/>Apparance</button>
-        
-        <button className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2"><IoIosLogOut className='text-[20px]'/>Log out</button>
-      </div>
-    </div>
-  )
-}
 
-export default More
+  return (
+    <div
+      ref={ref}
+      className="absolute w-[265px] bg-white left-5 bottom-5 z-10 
+    rounded-lg shadow-2xl py-5 pl-5 pr-3"
+    >
+      {!isOpenApparence && (
+        <div className="flex flex-col ">
+          <button className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2">
+            <FiSettings className="text-[20px]" />
+            Setting
+          </button>
+
+          <button
+            onClick={()=> setIsOpenApparence((open)=>!open)}
+            className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2"
+          >
+            <MdDarkMode className="text-[20px]" />
+            Apparance
+          </button>
+
+          <button className="py-3 bg-white hover:bg-gray-100 rounded-md flex items-center  px-4 gap-x-2">
+            <IoIosLogOut className="text-[20px]" />
+            Log out
+          </button>
+        </div>
+      )}
+
+      {/* Dark Mode UI */}
+
+      {isOpenApparence && (
+      <Apparence setIsOpenApparence={setIsOpenApparence}/>
+      )}
+
+
+    </div>
+  );
+};
+
+export default More;

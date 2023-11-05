@@ -31,7 +31,7 @@ const NavDesktop = () => {
   }
  
   return (
-    <div className="Nav  lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	hidden  fixed left-0 bg-white">
+    <div className="Nav  lg:h-screen md:h-screen lg:w-[250px] md:w-[70px] border-r-[1px] lg:flex md:flex flex-col  border-grey pt-[50px] justify-between	hidden  fixed left-0 bg-white ">
     <NavLink to="/" className="navLogo flex pl-7 md:hidden lg:block">
       <InstagramLogo /> 
     </NavLink>
